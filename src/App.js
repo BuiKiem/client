@@ -1,12 +1,13 @@
 import React from "react";
 import { CssBaseline } from "@material-ui/core";
-import "./App.css";
+
+import { Header } from "./components/Header/Header";
 
 function App() {
   return (
     <>
       <CssBaseline />
-      <div>Homepage</div>
+      <Header />
     </>
   );
 }
