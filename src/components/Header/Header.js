@@ -39,7 +39,6 @@ export function Header() {
     <Menu
       anchorEl={anchorEl}
       anchorOrigin={{ vertical: "top", horizontal: "right" }}
-      keepMounted
       transformOrigin={{ vertical: "top", horizontal: "right" }}
       open={isMenuOpen}
       onClose={handleProfileMenuClose}
@@ -53,11 +52,7 @@ export function Header() {
     <div className={classes.grow}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-          >
+          <IconButton edge="start" color="inherit">
             <MenuIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
