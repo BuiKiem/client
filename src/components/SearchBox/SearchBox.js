@@ -1,20 +1,21 @@
 import React from "react";
-import { makeStyles, Paper } from "@material-ui/core";
+import { Paper, Grid } from "@material-ui/core";
 
-const useStyles = makeStyles(theme => ({
-  searchBox: {
-    height: "250px",
-    width: "75%",
-    margin: "0 auto"
-  }
-}));
+import useStyles from "./SearchBox.style";
 
 export function SearchBox() {
   const classes = useStyles();
 
   return (
     <Paper className={classes.searchBox}>
-      <div>ffdsfdsfs</div>
+      <Grid container className={classes.root}>
+        <Grid item xs={3}>
+          <div style={{ backgroundColor: "blue" }}>blue</div>
+        </Grid>
+        <Grid item xs={9}>
+          <div style={{ backgroundColor: "green" }}>green</div>
+        </Grid>
+      </Grid>
     </Paper>
   );
 }
