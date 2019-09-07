@@ -1,5 +1,11 @@
 import React from "react";
 
+import { Carousel } from "../components/Carousel/Carousel";
+
 export function HomePage() {
-  return <h1>HOMEPAGE</h1>;
+  return (
+    <div>
+      <Carousel />
+    </div>
+  );
 }
