@@ -16,23 +16,24 @@ export function Carousel() {
     "https://picsum.photos/id/20/400/600"
   ];
   const lastIndex = imgUrls.length - 1;
+  const nextIndex = currentIndex === lastIndex ? 0 : currentIndex + 1;
+  const prevIndex = currentIndex === 0 ? lastIndex : currentIndex - 1;
 
   function previousSlide() {
-    const shouldResetIndex = currentIndex === 0;
-    const index = shouldResetIndex ? lastIndex : currentIndex - 1;
-    setCurrentIndex(index);
+    setCurrentIndex(prevIndex);
   }
 
   function nextSlide() {
-    const shouldResetIndex = currentIndex === lastIndex;
-    const index = shouldResetIndex ? 0 : currentIndex + 1;
-    setCurrentIndex(index);
+    setCurrentIndex(nextIndex);
   }
 
   return (
     <div className={classes.carousel}>
       <CarouselArrow direction="left" clickFunction={previousSlide} />
+
+      <CarouselItem url={imgUrls[prevIndex]} />
       <CarouselItem url={imgUrls[currentIndex]} />
+      <CarouselItem url={imgUrls[nextIndex]} />
 
       <CarouselArrow direction="right" clickFunction={nextSlide} />
 
