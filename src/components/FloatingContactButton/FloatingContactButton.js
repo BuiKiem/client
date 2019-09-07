@@ -1,6 +1,6 @@
 import React from "react";
-import Fab from "@material-ui/core/Fab";
-import AddIcon from "@material-ui/icons/Add";
+import { Typography, Fab } from "@material-ui/core";
+import { Email as EmailIcon } from "@material-ui/icons";
 
 import useStyles from "./FloatingContactButton.style";
 
@@ -8,8 +8,9 @@ export function FloatingActionButtonZoom() {
   const classes = useStyles();
 
   return (
-    <Fab className={classes.fab} color="primary">
-      <AddIcon />
+    <Fab variant="extended" className={classes.fab} color="primary">
+      <EmailIcon />
+      <Typography variant="body1">Contact</Typography>
     </Fab>
   );
 }
