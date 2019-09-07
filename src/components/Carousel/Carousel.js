@@ -4,7 +4,10 @@ import { CarouselItem } from "./CarouselItem/CarouselItem";
 import { CarouselArrow } from "./CarouselArrow/CarouselArrow";
 import { Paper } from "@material-ui/core";
 
-export function PromotionCarousel() {
+import useStyles from "./Carousel.style";
+
+export function Carousel() {
+  const classes = useStyles();
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const imgUrls = [
@@ -27,10 +30,7 @@ export function PromotionCarousel() {
   }
 
   return (
-    <Paper
-      className="carousel"
-      style={{ position: "relative", width: "100%", height: "400px" }}
-    >
+    <Paper className={classes.carousel}>
       <CarouselArrow
         direction="left"
         clickFunction={previousSlide}

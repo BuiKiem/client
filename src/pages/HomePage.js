@@ -1,11 +1,11 @@
 import React from "react";
 
-import { PromotionCarousel } from "../components/PromotionCarousel/PromotionCarousel";
+import { Carousel } from "../components/Carousel/Carousel";
 
 export function HomePage() {
   return (
     <div>
-      <PromotionCarousel />
+      <Carousel />
     </div>
   );
 }
