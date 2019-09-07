@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import { Button } from "@material-ui/core";
 
 import { CarouselItem } from "./CarouselItem/CarouselItem";
 import { CarouselArrow } from "./CarouselArrow/CarouselArrow";
-import { Paper } from "@material-ui/core";
 
 import useStyles from "./Carousel.style";
 
@@ -30,19 +30,15 @@ export function Carousel() {
   }
 
   return (
-    <Paper className={classes.carousel}>
-      <CarouselArrow
-        direction="left"
-        clickFunction={previousSlide}
-        glyph="&#9664;"
-      />
+    <div className={classes.carousel}>
+      <CarouselArrow direction="left" clickFunction={previousSlide} />
       <CarouselItem url={imgUrls[currentIndex]} />
 
-      <CarouselArrow
-        direction="right"
-        clickFunction={nextSlide}
-        glyph="&#9654;"
-      />
-    </Paper>
+      <CarouselArrow direction="right" clickFunction={nextSlide} />
+
+      <Button size="large" className={classes.carouselButton}>
+        Detail
+      </Button>
+    </div>
   );
 }

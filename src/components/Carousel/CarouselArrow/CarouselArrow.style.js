@@ -6,7 +6,8 @@ export default makeStyles(theme => ({
     backgroundColor: theme.palette.primary.contrastText,
     cursor: "pointer",
     position: "absolute",
-    top: "50%"
+    top: "50%",
+    opacity: "0.7"
   },
   left: {
     left: theme.spacing(1)
