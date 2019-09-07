@@ -7,6 +7,10 @@ export default makeStyles(theme => ({
   },
   footer: {
     backgroundColor: theme.palette.background.paper,
-    marginTop: theme.spacing(8)
+    marginTop: theme.spacing(8),
+    position: "absolute",
+    width: "100%",
+    bottom: theme.spacing(0),
+    left: theme.spacing(0)
   }
 }));
