@@ -36,10 +36,6 @@ export function Carousel() {
       <CarouselItem url={imgUrls[nextIndex]} />
 
       <CarouselArrow direction="right" clickFunction={nextSlide} />
-
-      <Button size="large" className={classes.carouselButton}>
-        Detail
-      </Button>
     </div>
   );
 }
