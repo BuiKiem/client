@@ -1,5 +1,11 @@
 import React from "react";
 
+import { PromotionCarousel } from "../components/PromotionCarousel/PromotionCarousel";
+
 export function HomePage() {
-  return <h1>HOMEPAGE</h1>;
+  return (
+    <div>
+      <PromotionCarousel />
+    </div>
+  );
 }
