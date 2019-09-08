@@ -11,7 +11,7 @@ import {
 import {
   Menu as MenuIcon,
   AccountCircle as AccountCircleIcon,
-  LocalHotel as Hotel,
+  LocalHotel as HotelIcon,
   Flight as FlightIcon,
   AttachMoney as PromotionIcon
 } from "@material-ui/icons";
@@ -68,7 +68,7 @@ export function Header() {
             </Button>
 
             <Button color="inherit" className={classes.menuButton}>
-              <Hotel />
+              <HotelIcon />
               <Typography variant="body1">Hotel</Typography>
             </Button>
             <Button color="inherit" className={classes.menuButton}>
