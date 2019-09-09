@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Paper, Grid } from "@material-ui/core";
 
 import useStyles from "./SearchBox.style";
+
+import { SearchHotelForm } from "./SearchHotelForm/SearchHotelForm";
 import { SearchCategory } from "./SearchCategory/SearchCategory";
 
 const SEARCH_CATEGORIES = {
@@ -30,7 +32,7 @@ export function SearchBox() {
           <SearchCategory {...actions} />
         </Grid>
         <Grid item xs={9}>
-          {currentSearch}
+          <SearchHotelForm />
         </Grid>
       </Grid>
     </Paper>
